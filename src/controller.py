@@ -12,7 +12,7 @@ class Controller:
         self.height = height
         self.screen = pygame.display.set_mode((self.width, self.height))
         self.background = pygame.Surface(self.screen.get_size()).convert()
-        self.background.fill((250, 250, 250))  # set the background to white
+        self.background.fill((173, 216, 230))  # set the background to white
         pygame.font.init()  # you have to call this at the start, if you want to use this module.
         pygame.key.set_repeat(1, 50)  # initialize a held keey to act as repeated key strikes
         """Load the sprites that we need"""
@@ -26,6 +26,11 @@ class Controller:
         self.hero = hero.Hero("Conan", 50, 80, "assets/hero.png")
         self.all_sprites = pygame.sprite.Group((self.hero,) + tuple(self.enemies))
         self.state = "GAME"
+      """
+	  description: initialize the controller, and loads sprites needed, and gives movements to enemies 
+	  args: self,width,height
+  	return: nothing
+      """
 
     def mainLoop(self):
         while True:
@@ -33,6 +38,12 @@ class Controller:
                 self.gameLoop()
             elif(self.state == "GAMEOVER"):
                 self.gameOver()
+
+      """
+	  description: determines if the game should be over or restart, depending on the state 
+	  args: self
+  	return: nothing
+      """
 
     def gameLoop(self):
         while self.state == "GAME":
@@ -70,6 +81,12 @@ class Controller:
             # update the screen
             pygame.display.flip()
 
+  """
+	description: gives movement instructions for a hero in a "GAME" state, checks for collisons, and redraws screen
+	args: self
+	return: nothing
+"""
+
     def gameOver(self):
         self.hero.kill()
         myfont = pygame.font.SysFont(None, 30)
@@ -80,3 +97,9 @@ class Controller:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
+"""
+	description: function gives instructions to set up screen when game is over
+	args: self
+	return: nothing
+"""
+

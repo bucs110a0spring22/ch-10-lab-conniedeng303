@@ -20,7 +20,11 @@ class Hero(pygame.sprite.Sprite):
         self.name = name
         self.speed = 3
         self.health = 3
-
+  """
+	description: initialize the hero, creates object of enemy
+	args: pygame.sprite, sprite
+	return: none
+	"""
     #methods to make moving our hero easier
     def move_up(self):
         self.rect.y -= self.speed
@@ -31,6 +35,12 @@ class Hero(pygame.sprite.Sprite):
     def move_right(self):
         self.rect.x += self.speed
 
+  """
+	description: makes speed quicker as they go in one direction continously
+	args: self
+	return: none
+	"""
+
     def fight(self, opponent):
         if(random.randrange(3)):
             self.health -= 1
@@ -39,3 +49,9 @@ class Hero(pygame.sprite.Sprite):
         else:
             print("successful attack")
         return True
+      
+  """
+	description: initialize the enemy, creates object of enemy
+	args: self,opponent
+	return: False, True
+	"""
