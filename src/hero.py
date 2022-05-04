@@ -48,12 +48,12 @@ class Hero(pygame.sprite.Sprite):
         if len(story1) >= 10:
           print("Hazzah! Your spell was enough!")
           return True
-        elif len(story1) <= 8:
+        elif len(story1) % 2 == 0:
           print("Hazzah! Your spell was so powerful that it gave you another life!")
           self.health += 1
           return True
         elif len(story1) <= 5:
-          print("You failed! Maybe your spell need more of a certain type of letters (perhaps vowels?)")
+          print("You failed! Maybe you can get another life by being EVEN better.")
           print("attack failed. Remaining Health: ", self.health)
           return False
       else:
