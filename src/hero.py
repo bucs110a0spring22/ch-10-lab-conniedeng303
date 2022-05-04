@@ -43,23 +43,22 @@ class Hero(pygame.sprite.Sprite):
 
     def fight(self, opponent):
       if(random.randrange(3)):
-        story1 = input("The enemy says,""I got you!"". Before it strikes, you however, are sorcerous, and can maybe cast a spell to save yourself. Type a spell that might save you!.")
-      vowel_count = 0
-      for i in story1:
-        if i in "AIEOUaieou":
-              vowel_count += 1
-      if vowel_count >= 7:
-        print("Hazzah! Your spell was enough!")
-        return True
-      elif vowel_count > 10:
-        print("Hazzah! Your spell was so powerful that it gave you another life!")
-        self.health += 1
-        return True
-      elif vowel_count <= 5:
-        print("You failed! Maybe your spell need more of a certain type of letters (perhaps vowels?)")
-        self.health -= 1
-        print("attack failed. Remaining Health: ", self.health)
-        return False
+        story1 = input("The enemy says,""I got you!"". Before it strikes, you however, are a witch, and can maybe cast a spell to save yourself. Type a spell that might save you!.")
+        vowel_count = 0
+        for i in str(story1):
+          if i in "AIEOUaieou":
+                vowel_count += 1
+        if vowel_count >= 7:
+          print("Hazzah! Your spell was enough!")
+          return True
+        elif vowel_count > 10:
+          print("Hazzah! Your spell was so powerful that it gave you another life!")
+          self.health += 1
+          return True
+        elif vowel_count <= 5:
+          print("You failed! Maybe your spell need more of a certain type of letters (perhaps vowels?)")
+          print("attack failed. Remaining Health: ", self.health)
+          return False
       else:
         print("successful attack")
         return True
