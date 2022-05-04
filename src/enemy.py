@@ -21,18 +21,19 @@ class Enemy(pygame.sprite.Sprite):
         self.speed = 2
 
   
-  """
+        """
 	description: initialize the enemy, creates object of enemy
 	args: pygame,sprite.Sprite
 	return: none
 	"""
 
     def update(self):
+        
         print("'Update me,' says " + self.name)
 
-  """
+        """
 	description: gives constant update to name
 	args: self
   return: none
-	"""
+	      """
 

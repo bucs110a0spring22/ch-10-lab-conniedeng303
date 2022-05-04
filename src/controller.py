@@ -26,11 +26,12 @@ class Controller:
         self.hero = hero.Hero("Conan", 50, 80, "assets/hero.png")
         self.all_sprites = pygame.sprite.Group((self.hero,) + tuple(self.enemies))
         self.state = "GAME"
-      """
+      
+        """
 	  description: initialize the controller, and loads sprites needed, and gives movements to enemies 
 	  args: self,width,height
   	return: nothing
-      """
+        """
 
     def mainLoop(self):
         while True:
@@ -39,7 +40,7 @@ class Controller:
             elif(self.state == "GAMEOVER"):
                 self.gameOver()
 
-      """
+            """
 	  description: determines if the game should be over or restart, depending on the state 
 	  args: self
   	return: nothing
@@ -81,11 +82,11 @@ class Controller:
             # update the screen
             pygame.display.flip()
 
-  """
+            """
 	description: gives movement instructions for a hero in a "GAME" state, checks for collisons, and redraws screen
 	args: self
 	return: nothing
-"""
+            """
 
     def gameOver(self):
         self.hero.kill()
