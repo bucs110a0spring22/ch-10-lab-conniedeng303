@@ -8,20 +8,20 @@
 Replace anything surrounded by the `< >` symbols._
 
 ## SUMMARY:
- < Provide a short description of your program's functionality. No more than a couple sentences. >
+  For PART A, 
 #### Unique Feature
- < Describe the unique feature you added >
+ < For my feature, instead of leaving the combat to 100% chance, I  made it so if random.randrange(3), then the hero would have type a spell, which will determine whether the hero would be able to survive, get an extra life, or fail.>
 
 ## GRACE DAYS
-Grace days used for this assignment: < # >
+Grace days used for this assignment: < 1 >
 
-Grace days remaining: < # >/5
+Grace days remaining: < 0 >/5
 
 ## KNOWN BUGS AND INCOMPLETE PARTS:
- < What parts of the project you were not able to complete >
+ < NONE. >
 
 ## REFERENCES:
- < List any outside resources used >
+ < NONE. >
 
 ## MISCELLANEOUS COMMENTS:
- < Anything you would like the grader to know >
+ < NONE. >

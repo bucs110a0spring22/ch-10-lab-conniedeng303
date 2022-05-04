@@ -27,9 +27,9 @@ class Enemy(pygame.sprite.Sprite):
 	return: none
 	"""
 
-    # def update(self):
-        
-    #     print("'Update me,' says " + self.name)
+    def update(self):
+        self.rect.x += random.randint(-1,1)
+        self.rect.y += random.randint(-1,1)
 
         """
 	description: gives constant update to name

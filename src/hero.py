@@ -55,6 +55,7 @@ class Hero(pygame.sprite.Sprite):
         elif len(story1) <= 5:
           print("You failed! Maybe you can get another life by being EVEN better.")
           print("attack failed. Remaining Health: ", self.health)
+          self.health -= 1
           return False
       else:
         print("successful attack")
